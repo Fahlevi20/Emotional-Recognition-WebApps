@@ -20,7 +20,7 @@ jobs:
           python-version: "3.10"
 
       - name: Install dependencies
-        run: pip install tensorflow==2.10.1 keras==2.10.0 pillow numpy
+        run: pip install tensorflow==2.10.1 keras==2.10.0 "numpy<2" pillow
 
       - name: Validate model files
         run: python .github/scripts/test_model.py
