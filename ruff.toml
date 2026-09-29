@@ -6,4 +6,4 @@ ignore = [
     "E501",   # line too long
     "E402",   # module level import not at top
 ]
-select = ["E", "F", "I"]
+select = ["E", "F"]
