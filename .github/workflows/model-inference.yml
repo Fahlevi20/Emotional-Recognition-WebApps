@@ -3,16 +3,8 @@ name: Model Inference
 on:
   push:
     branches: [master, main]
-    paths:
-      - "model/**"
-      - "app.py"
-      - "best_weights.h5"
   pull_request:
     branches: [master, main]
-    paths:
-      - "model/**"
-      - "app.py"
-      - "best_weights.h5"
 
 jobs:
   inference:
