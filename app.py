@@ -1,3 +1,4 @@
+# Emotional Recognition Web App
 import streamlit as st
 import keras
 from PIL import Image
