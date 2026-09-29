@@ -1,10 +1,8 @@
-[tool.ruff]
 line-length = 120
 
-[tool.ruff.lint]
-# Ignore rules commonly triggered in ML/research code
+[lint]
 ignore = [
-    "F401",   # unused imports (common in notebooks/scripts)
+    "F401",   # unused imports (common in ML/research code)
     "E501",   # line too long
     "E402",   # module level import not at top
 ]
