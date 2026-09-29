@@ -14,13 +14,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Setup Python 3.10
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
       - name: Install dependencies
-        run: pip install tensorflow keras pillow numpy
+        run: pip install tensorflow==2.10.1 keras==2.10.0 pillow numpy
 
-      - name: Test model inference
+      - name: Validate model files
         run: python .github/scripts/test_model.py
+
+      - name: Upload inference results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inference-results
+          path: inference_results_*.json
