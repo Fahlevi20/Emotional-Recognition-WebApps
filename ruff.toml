@@ -1,0 +1,11 @@
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+# Ignore rules commonly triggered in ML/research code
+ignore = [
+    "F401",   # unused imports (common in notebooks/scripts)
+    "E501",   # line too long
+    "E402",   # module level import not at top
+]
+select = ["E", "F", "I"]
